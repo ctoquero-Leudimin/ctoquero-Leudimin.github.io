@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+        <p>
+            Reparación y venta de maquinaria ligera.
+            Servicio técnico Slith
+        </p>
+
+        <div id="principal">
+            <div><a href="{% url 'motosierras' %}">Motosierras</a></div>
+            <div><a href="{% url 'cortacespedes' %}">Cortacéspedes</a></div>
+            <div><a href="{% url 'desbrozadoras' %}">Desbrozadoras</a></div>
+        </div>
+        
+        <p>Contacte con nosotros</p>
+        <form action="{% url 'enviado' %}" method="post">
+	    {% csrf_token %}
+	    {{form}}
+            <input type="text" placeholder="Nombre" name="name"><br/>
+            <input type="text" placeholder="Correo electrónico" name="eMail"><br/>
+            <textarea cols="20" name="comment" rows="5">Su comentario</textarea><br/><br/>
+	    <input type="submit" value="Enviar"/>
+        </form><br/>
+
+	<a href="{% url 'user' %}">Acceso usuarios</a>
+{% endblock %}

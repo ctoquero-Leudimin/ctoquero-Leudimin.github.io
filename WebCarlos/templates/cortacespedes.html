@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+	<h2>Cortacéspedes</h2>
+
+	<ul>
+		{% for cortacesped in cortacespedes %}
+			<li>{{cortacesped.modelo}}: {{cortacesped.descripcion}} - {{cortacesped.precio}} €</li>
+		{% endfor %}	
+        </ul>
+        <a href="{% url 'index' %}">Volver</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+	<h2>Desbrozadoras</h2>
+
+	<ul>
+		{% for desbrozadora in desbrozadoras %}
+			<li>{{desbrozadora.modelo}}: {{desbrozadora.descripcion}} - {{desbrozadora.precio}} €</li>
+		{% endfor %}	
+        </ul>
+        <a href="{% url 'index' %}">Volver</a>
+{% endblock %}

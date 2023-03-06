@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block body %}
+
+	<h2>Bienvenido, {{ request.user.username }}</h2>
+	<a href="{% url 'logout' %}">Salir</a></br>
+	<a href="{% url 'index' %}">Volver</a>
+{% endblock %}

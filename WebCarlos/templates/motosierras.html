@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+	<h2>Motosierras</h2>
+
+	<ul>
+		{% for motosierra in motosierras %}
+			<li>{{motosierra.modelo}}: {{motosierra.descripcion}} - {{motosierra.precio}} €</li>
+		{% endfor %}	
+        </ul>
+        <a href="{% url 'index' %}">Volver</a>
+{% endblock %}

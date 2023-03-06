@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <title>Talleres Toquero</title>
+
+    <style>
+        body{
+            background-color:lightgoldenrodyellow
+        }
+
+        #principal {
+            display:flex;
+            flex-wrap: wrap
+        }
+
+        #principal > div {
+            background-color: white;
+            font-size: 20px;
+            margin: 20px;
+            padding: 20px;
+            width: 200px;
+        }
+    </style>
+
+    <body>
+	<h1>Talleres Toquero</h1>
+        {% block body %}
+	{% endblock %}
+    </body>
+</html>
